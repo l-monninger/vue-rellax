@@ -39,9 +39,6 @@ const update: DirectiveFunction = (el, { value }, vm) => {
 }
 
 const install: PluginFunction<void> = (InjectedVue: typeof Vue) => {
-  if (process.env.NODE_ENV !== 'production' && _Vue) {
-    throw new Error('[vue-rellax] Vue Rellax is already installed')
-  }
 
   _Vue = InjectedVue
 
