@@ -15,7 +15,10 @@ const inserted: DirectiveFunction = (el, { value }, vm) => {
     return
   }
 
-  instanceMap.set(el, new Rellax(el, value))
+  instanceMap.set(el, new Rellax(el, value));
+  
+  console.log("Installed Rellax on an element.");
+  
 }
 
 const destroy = (el: HTMLElement) => {
